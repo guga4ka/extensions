@@ -1,12 +1,4 @@
-import {
-  ActionPanel,
-  CopyToClipboardAction,
-  environment,
-  getPreferenceValues,
-  Icon,
-  List,
-  PasteAction,
-} from "@raycast/api";
+import { ActionPanel, environment, getPreferenceValues, Icon, List, Action } from "@raycast/api";
 import { icondir } from "../constants";
 import { icon } from "../util/icon";
 import { compare } from "../util/compare";
@@ -15,17 +7,17 @@ const { primaryActionIsCopy } = getPreferenceValues<{ primaryActionIsCopy: boole
 
 function PrimaryAction({ pin }: { pin: string }) {
   return primaryActionIsCopy ? (
-    <CopyToClipboardAction title="Copy OTP" content={pin} />
+    <Action.CopyToClipboard title="Copy OTP" content={pin} />
   ) : (
-    <PasteAction title="Output OTP" content={pin} />
+    <Action.Paste title="Output OTP" content={pin} />
   );
 }
 
 function SecondaryAction({ pin }: { pin: string }) {
   return primaryActionIsCopy ? (
-    <PasteAction title="Output OTP" content={pin} />
+    <Action.Paste title="Output OTP" content={pin} />
   ) : (
-    <CopyToClipboardAction title="Copy OTP" content={pin} />
+    <Action.CopyToClipboard title="Copy OTP" content={pin} />
   );
 }
 
@@ -69,7 +61,7 @@ export default function OtpListItem({ item, basis, timeLeft, refresh }: OtpListI
         <ActionPanel>
           <PrimaryAction pin={otp ?? ""} />
           <SecondaryAction pin={otp ?? ""} />
-          <ActionPanel.Item
+          <Action
             title={"Sync"}
             icon={Icon.ArrowClockwise}
             shortcut={{ modifiers: ["cmd"], key: "r" }}

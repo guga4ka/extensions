@@ -1,4 +1,4 @@
-import { ActionPanel, environment, getPreferenceValues, Icon, List, Action } from "@raycast/api";
+import { ActionPanel, environment, getPreferenceValues, Icon, List, Action, popToRoot } from "@raycast/api";
 import { icondir } from "../constants";
 import { icon } from "../util/icon";
 import { compare } from "../util/compare";
@@ -7,17 +7,17 @@ const { primaryActionIsCopy } = getPreferenceValues<{ primaryActionIsCopy: boole
 
 function PrimaryAction({ pin }: { pin: string }) {
   return primaryActionIsCopy ? (
-    <Action.CopyToClipboard title="Copy OTP" content={pin} />
+    <Action.CopyToClipboard title="Copy OTP" content={pin} onCopy={() => popToRoot()} />
   ) : (
-    <Action.Paste title="Output OTP" content={pin} />
+    <Action.Paste title="Output OTP" content={pin} onPaste={() => popToRoot()} />
   );
 }
 
 function SecondaryAction({ pin }: { pin: string }) {
   return primaryActionIsCopy ? (
-    <Action.Paste title="Output OTP" content={pin} />
+    <Action.Paste title="Output OTP" content={pin} onPaste={() => popToRoot()} />
   ) : (
-    <Action.CopyToClipboard title="Copy OTP" content={pin} />
+    <Action.CopyToClipboard title="Copy OTP" content={pin} onCopy={() => popToRoot()} />
   );
 }
 
@@ -52,8 +52,8 @@ export default function OtpListItem({ item, basis, timeLeft, refresh }: OtpListI
       accessoryIcon={{
         source: {
           light: `${environment.assetsPath}/${icondir}/light/${pie}.png`,
-          dark: `${environment.assetsPath}/${icondir}/dark/${pie}.png`,
-        },
+          dark: `${environment.assetsPath}/${icondir}/dark/${pie}.png`
+        }
       }}
       icon={icon(item)}
       keywords={[subtitle]}

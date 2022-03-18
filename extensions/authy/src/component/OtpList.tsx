@@ -58,7 +58,7 @@ export function OtpList(props: { isLogin: boolean | undefined; setLogin: (login:
     await showToast({
       style: Toast.Style.Success,
       title: "Authy",
-      message: "Data was successful refreshed",
+      message: "Data has been synced",
     });
   }
 

@@ -12,7 +12,7 @@ export async function checkIfCached(key: string): Promise<boolean> {
 }
 
 export async function getFromCache<T>(key: string): Promise<T> {
-  const fromCache = await LocalStorage.getItem(key);
+  const fromCache = await LocalStorage.getItem<string>(key);
   if (fromCache != undefined) {
     return JSON.parse(fromCache);
   } else {

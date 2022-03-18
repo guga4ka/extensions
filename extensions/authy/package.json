@@ -6,8 +6,10 @@
   "icon": "command-icon.png",
   "author": "guga4ka",
   "contributors": [
+    "gdsmith",
     "lukekarrys"
   ],
+  "categories": ["Security"],
   "license": "MIT",
   "commands": [
     {

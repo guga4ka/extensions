@@ -16,7 +16,7 @@
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.25.0",
+    "@raycast/api": "^1.45.2",
     "prettier": "^2.4.1",
     "rss-parser": "^3.12.0"
   },

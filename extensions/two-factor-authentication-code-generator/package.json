@@ -20,7 +20,7 @@
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.25.0",
+    "@raycast/api": "^1.45.2",
     "hi-base32": "^0.5.1"
   },
   "devDependencies": {

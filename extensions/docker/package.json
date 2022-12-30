@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@priithaamer/dockerode": "^3.3.1-priithaamer.1",
-    "@raycast/api": "^1.25.0",
+    "@raycast/api": "^1.45.2",
     "node-fetch": "^3.0.0"
   },
   "devDependencies": {

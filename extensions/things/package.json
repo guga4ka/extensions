@@ -44,7 +44,7 @@
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.25.0",
+    "@raycast/api": "^1.45.2",
     "dayjs": "^1.10.7",
     "lodash.groupby": "^4.6.0",
     "lodash.map": "^4.6.0",

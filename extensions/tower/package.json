@@ -34,7 +34,7 @@
     }
   ],
   "dependencies": {
-    "@raycast/api": "^1.25.0",
+    "@raycast/api": "^1.45.2",
     "node-fetch": "^2.6.1",
     "plist": "^3.0.3",
     "tildify": "^3.0.0"

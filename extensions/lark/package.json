@@ -65,7 +65,7 @@
     "dev": "ray develop"
   },
   "dependencies": {
-    "@raycast/api": "^1.25.0",
+    "@raycast/api": "^1.45.2",
     "axios": "^0.23.0",
     "dayjs": "^1.10.7",
     "string": "^3.3.3"

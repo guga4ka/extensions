@@ -24,7 +24,7 @@
     "typescript": "^4.3.4"
   },
   "dependencies": {
-    "@raycast/api": "^1.25.0"
+    "@raycast/api": "^1.45.2"
   },
   "scripts": {
     "build": "ray build -e dist",

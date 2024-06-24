@@ -77,6 +77,7 @@ export interface Services {
       password_timestamp: number;
       salt: string;
       unique_id: string;
+      key_derivation_iterations: number;
     }
   ];
   deleted: string[];
